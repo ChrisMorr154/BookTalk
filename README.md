@@ -60,7 +60,7 @@ The Login page verifies credentials through a secure backend route. If successfu
 
 ## Login Attempts
 
-Invalid credentials trigger error messages. The backend responds with a meaningful status code, and the frontend renders the error beneath the fields.
+This screenshot shows a successful login, where valid credentials were entered and the server returned a signed JWT. The frontend stored the token in React Context, granting the user authenticated access to the Home page and all protected routes.
 
 <p align="center">
   <img src="./Screenshots/login_attempts.jpg" width="300" />
