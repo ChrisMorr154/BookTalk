@@ -50,14 +50,6 @@ The Home page serves as the central feed where users see system posts and user-g
   <img src="./Screenshots/homepage.jpg" width="300" />
 </p>
 
-## Home Page With URL
-
-This version shows the app running with React Router, demonstrating authenticated navigation once the JWT token has been validated and stored in context.
-
-<p align="center">
-  <img src="./Screenshots/homepageUrl.jpg" width="300" />
-</p>
-
 ## Login
 
 The Login page verifies credentials through a secure backend route. If successful, the server returns a signed JWT which is stored in React Context for all protected API calls.
@@ -88,14 +80,6 @@ The Profile page lets users upload a profile image, edit their biography, and ad
 
 <p align="center">
   <img src="./Screenshots/profile.jpg" width="300" />
-</p>
-
-## Profile With URL
-
-This screenshot shows the profile page accessed through its route, with JWT validation ensuring only the logged-in user can access their data.
-
-<p align="center">
-  <img src="./Screenshots/profile_With_Url.jpg" width="300" />
 </p>
 
 ## Server Output
