@@ -1,0 +1,134 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #e0f2ff 0, #f3f4f6 45%, #e5e7eb 100%);
+}
+
+/* Main 3-column layout (Sidebar | Feed | Rightbar) */
+.home-main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem;
+
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 260px;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+/* Make columns size to content instead of stretching full height */
+.home-main-content .sidebar,
+.home-main-content .feed,
+.home-main-content .rightbar {
+  align-self: flex-start;
+}
+
+/* Shared card look for the three columns */
+.home-main-content .sidebar,
+.home-main-content .feed,
+.home-main-content .rightbar {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* ===== SIDEBAR (left) ===== */
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.sidebar li:hover {
+  background: #f0f2f5;
+  transform: translateY(-1px);
+}
+
+/* ===== FEED (center) ===== */
+
+/* Center column should feel like the main focus */
+.feed {
+  border: 1px solid #e5e7eb;
+}
+
+/* You can tighten up any header/button in your Feed using these */
+.feed h2,
+.feed h3 {
+  margin-top: 0;
+}
+
+.feed button {
+  text-transform: none;
+}
+
+/* ===== RIGHTBAR (right) ===== */
+
+.rightbar .suggestions h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.rightbar .suggestions p {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Friend list inside rightbar (assuming FriendList renders a ul) */
+.rightbar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.rightbar li {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #f3f4f6;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 960px) {
+  .home-main-content {
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+  }
+
+  .home-main-content .rightbar {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-main-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-main-content .sidebar,
+  .home-main-content .rightbar {
+    display: none; /* focus on the feed on small screens */
+  }
+
+  .home-main-content .feed {
+    min-height: 60vh;
+  }
+}

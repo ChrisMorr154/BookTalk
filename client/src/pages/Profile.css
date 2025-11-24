@@ -1,0 +1,197 @@
+/* General Page Styles */
+.profile-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .profile-header {
+    background-color: #007bff; /* Blue nav bar */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .profile-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .profile-header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-header .nav ul li {
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .profile-header .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Profile Content Layout */
+  .profile-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .profile-edit-container {
+    width: 40%;
+    text-align: center;
+  }
+  
+  /* Profile Image Section */
+  .profile-image-section {
+    margin-bottom: 20px;
+  }
+  
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;   /* keeps the image from stretching */
+    border-radius: 12px; /* soft square corners */
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd; /* optional subtle frame */
+}
+
+  
+  .no-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background: #f4f4f4;
+    color: #777;
+}
+
+  
+  /* File input styling */
+  .file-input {
+    margin-top: 10px;
+  }
+  
+  /* Biography Section */
+  .biography-section {
+    margin-bottom: 10px;
+  }
+  
+  .bio-textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .published-biography {
+    border: 1px solid #ccc;
+    padding: 8px;
+    min-height: 80px;
+    background: #f9f9f9;
+  }
+  
+  /* Edit Button Section */
+  .edit-button-section {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .add-post-button {
+    width: 150px;
+    padding: 6px;
+    margin-top: 8px;
+    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  /* Favorite Books Section */
+  .favorite-books-section {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .favorite-books-section h3 {
+    text-align: center;
+  }
+  
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .book-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .book-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  /* Reuse AddPost styles for modal */
+  .add-post {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .post-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-content-container textarea,
+  .post-content-container button {
+    margin-top: 0.5rem;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 4px;
+  }
+  
+  .close-modal {
+    background-color: #ccc;
+    margin-top: 10px;
+  }
+  
